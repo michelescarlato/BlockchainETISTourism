@@ -38,6 +38,7 @@ def rowExtraction(row):
                 #print(filedata[row][i])
                 outputDictDraft[j].append(filedata[row][i])
         outputDict = jsonAdapter.conversion(outputDictDraft)
+        outputDict["Survey Type"]= "visitors"
         return outputDict
 
 
@@ -46,7 +47,7 @@ if __name__ == "__main__":
     # single row
     aRow = 300 # max index: 651
     outputDict = rowExtraction(aRow)
-    print(outputDict)
+    print(json.dumps(outputDict))
     # save into JSON    # [alternatively you can perform the transaction here ]
     # with open("output"+str(aRow)+".json", "w") as jsonFile:
     #    jsonFile.write(json.dumps(outputDict))
@@ -55,7 +56,3 @@ if __name__ == "__main__":
     # for row in range(1, 651):
     #    outputDict = rowExtraction(row)
     #    print(row, outputDict)
-
-
-
-
