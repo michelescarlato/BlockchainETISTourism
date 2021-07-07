@@ -8,7 +8,7 @@ def sendTransatcionToBigChainDB(assetdata):
     assetdata = {
         'data': {
         +assetdata+
-        }
+        },
     }
     print(assetdata)
     alice = generate_keypair()
