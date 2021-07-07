@@ -5,7 +5,7 @@ from sys import exit
 
 
 def sendTransatcionToBigChainDB(assetdata):
-    assetdata = {
+    assetdata_tx = {
         'data': {
         +assetdata+
         },
@@ -18,7 +18,7 @@ def sendTransatcionToBigChainDB(assetdata):
     prepared_creation_tx = bdb.transactions.prepare(
         operation='CREATE',
         signers=alice.public_key,
-        asset=assetdata,
+        asset=assetdata_tx,
         metadata=asset_metadata
     )
 
