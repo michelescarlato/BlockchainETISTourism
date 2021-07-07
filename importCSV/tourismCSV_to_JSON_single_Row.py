@@ -1,7 +1,7 @@
 import csv
 import json
 import jsonAdapter
-
+from BigchainDBConnector import sendTransatcionToBigChainDB
 
 # step 1: key extraction
 def createEmptyDictandKeys():
@@ -48,6 +48,7 @@ if __name__ == "__main__":
     aRow = 300 # max index: 651
     outputDict = rowExtraction(aRow)
     print(json.dumps(outputDict))
+    sendTransatcionToBigChainDB(assetdata)
     # save into JSON    # [alternatively you can perform the transaction here ]
     # with open("output"+str(aRow)+".json", "w") as jsonFile:
     #    jsonFile.write(json.dumps(outputDict))
