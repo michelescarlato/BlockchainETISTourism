@@ -47,8 +47,8 @@ def rowExtraction(row):
 def sendTX(row):
     # calls the function sendTransactionToBigChainDB to send the json of a given row number
     outputDict = rowExtraction(row)
-    assetdata = json.dumps(outputDict)
-    sendTransactionToBigChainDB(assetdata)
+    #assetdata = json.dumps(outputDict)
+    sendTransactionToBigChainDB(outputDict)
 
 if __name__ == "__main__":
     # USAGE
