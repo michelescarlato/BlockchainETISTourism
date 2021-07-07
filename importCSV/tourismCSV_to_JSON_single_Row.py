@@ -45,6 +45,7 @@ def rowExtraction(row):
 
 
 def sendTX(row):
+    # calls the function sendTransactionToBigChainDB to send the json of a given row number
     outputDict = rowExtraction(row)
     assetdata = json.dumps(outputDict)
     sendTransactionToBigChainDB(assetdata)
@@ -61,5 +62,7 @@ if __name__ == "__main__":
 
     # # # for each element in the csv
     # for row in range(1, 651):
+    #    sendTX(row)
+    
     #    outputDict = rowExtraction(row)
     #    print(row, outputDict)
