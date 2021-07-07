@@ -1,7 +1,7 @@
 import csv
 import json
 import jsonAdapter
-from BigchainDBConnector import sendTransatcionToBigChainDB
+from BigchainDBConnector import sendTransactionToBigChainDB
 
 # step 1: key extraction
 def createEmptyDictandKeys():

@@ -4,8 +4,8 @@ from time import sleep
 from sys import exit
 
 
-def sendTransatcionToBigChainDB(assetdata):
-    assetdata_tx = 'data': assetdata
+def sendTransactionToBigChainDB(assetdata):
+    assetdata_tx = 'data': {assetdata}
     print(assetdata_tx)
     alice = generate_keypair()
     bdb_root_url = 'http://59.0.198.238:9984'  # Use YOUR BigchainDB Root URL here
