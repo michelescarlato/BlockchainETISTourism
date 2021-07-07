@@ -22,12 +22,12 @@ survey
             contenutoSurveyAddedField = contenutoSurvey1.replace("}",", \"Survey Type\":\""+SurveyType+"\" }")
             console.log(contenutoSurveyAddedField);
             contenutoSurvey = JSON.parse(contenutoSurveyAddedField);
-            sendTransatcionToBigChainDB(contenutoSurvey);
+            sendTransactionToBigChainDB(contenutoSurvey);
             return contenutoSurvey;
     }
   );
 
-function sendTransatcionToBigChainDB (assetdata){
+function sendTransactionToBigChainDB (assetdata){
       // BigchainDB server instance or testnetwork (e.g. https://example.com/api/v1/)
       //const API_PATH = 'http://192.168.100.120:9984/api/v1/'
       const API_PATH = 'http://59.0.198.238:9984/api/v1/'

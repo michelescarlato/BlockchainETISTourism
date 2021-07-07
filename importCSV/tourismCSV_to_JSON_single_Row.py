@@ -49,7 +49,7 @@ if __name__ == "__main__":
     outputDict = rowExtraction(aRow)
     print(json.dumps(outputDict))
     assetdata = json.dumps(outputDict)
-    sendTransatcionToBigChainDB(assetdata)
+    sendTransactionToBigChainDB(assetdata)
     # save into JSON    # [alternatively you can perform the transaction here ]
     # with open("output"+str(aRow)+".json", "w") as jsonFile:
     #    jsonFile.write(json.dumps(outputDict))
