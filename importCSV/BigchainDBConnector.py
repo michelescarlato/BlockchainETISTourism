@@ -9,12 +9,12 @@ def sendTransatcionToBigChainDB(assetdata):
     alice = generate_keypair()
     bdb_root_url = 'http://59.0.198.238:9984'  # Use YOUR BigchainDB Root URL here
     bdb = BigchainDB(bdb_root_url)
-
+    asset_metadata = {"Survey Type": "visitors"}
     prepared_creation_tx = bdb.transactions.prepare(
         operation='CREATE',
         signers=alice.public_key,
-        asset=assetdata
-        #metadata=bicycle_asset_metadata
+        asset=assetdata,
+        metadata=asset_metadata
     )
 
     fulfilled_creation_tx = bdb.transactions.fulfill(
