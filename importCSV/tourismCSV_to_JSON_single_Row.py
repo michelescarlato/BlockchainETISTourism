@@ -28,6 +28,7 @@ def createEmptyDictandKeys():
 # then it does conversion 1 and conversion 2
 
 def rowExtraction(row):
+    outputDict={}
     with open("CSV_turisti2019.csv", "r") as myCSV:
         reader = csv.reader(myCSV, delimiter=',', quotechar='"')
         filedata = list(reader)
@@ -37,19 +38,23 @@ def rowExtraction(row):
             for i in mappingKeywordsToCSV[j]:
                 #print(filedata[row][i])
                 outputDictDraft[j].append(filedata[row][i])
-        outputDict = jsonAdapter.conversion(outputDictDraft)
-        outputDict["Survey Type"]= "visitors"
-        return outputDict
+        outputDictData = jsonAdapter.conversion(outputDictDraft)
+        outputDictData["Survey Type"]= "visitors"
+        outputDict['data']=outputDictData
+    return outputDict
 
+
+def sendTX(row):
+    outputDict = rowExtraction(row)
+    assetdata = json.dumps(outputDict)
+    sendTransactionToBigChainDB(assetdata)
 
 if __name__ == "__main__":
     # USAGE
     # single row
     aRow = 300 # max index: 651
-    outputDict = rowExtraction(aRow)
-    print(json.dumps(outputDict))
-    assetdata = json.dumps(outputDict)
-    sendTransactionToBigChainDB(assetdata)
+    sendTX(aRow)
+
     # save into JSON    # [alternatively you can perform the transaction here ]
     # with open("output"+str(aRow)+".json", "w") as jsonFile:
     #    jsonFile.write(json.dumps(outputDict))
