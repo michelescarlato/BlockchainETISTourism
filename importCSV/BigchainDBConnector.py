@@ -5,6 +5,10 @@ from sys import exit
 
 
 def sendTransatcionToBigChainDB(assetdata):
+    assetdata = {
+        'data': {
+        +assetdata+
+    }
     print(assetdata)
     alice = generate_keypair()
     bdb_root_url = 'http://59.0.198.238:9984'  # Use YOUR BigchainDB Root URL here
