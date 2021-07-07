@@ -13,7 +13,7 @@ def sendTransatcionToBigChainDB(assetdata):
     prepared_creation_tx = bdb.transactions.prepare(
         operation='CREATE',
         signers=alice.public_key,
-        asset=assetdata,
+        asset=assetdata
         #metadata=bicycle_asset_metadata
     )
 
