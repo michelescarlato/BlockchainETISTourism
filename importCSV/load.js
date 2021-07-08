@@ -1,4 +1,5 @@
 const driver = require('bigchaindb-driver')
+const fetch = require('node-fetch');
 
 
 fetch("js/fullData.json")
