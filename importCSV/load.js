@@ -16,7 +16,7 @@ async function dataIteration (jsonData){
 
     //console.log(jsonData.length);
     let len = jsonData.length;
-    for(let i=0;i<len; i++){
+    for(let i=0;i<3; i++){
         //TODO: manage async calls
         // Add code here
 
