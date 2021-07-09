@@ -1,5 +1,6 @@
 const driver = require('bigchaindb-driver')
 const fetch = require('node-fetch');
+console.log("Before fetch")
 fetch("js/fullData.json")
     .then(response => response.json())
     .then(json => dataIteration(json)); //console.log(json));
