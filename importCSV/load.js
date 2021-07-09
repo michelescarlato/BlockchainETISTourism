@@ -7,6 +7,8 @@ fetch("js/fullData.json")
 
 
 async function dataIteration (jsonData){
+    console.log("Inside data iteration")
+
     //console.log(jsonData.length);
     let len = jsonData.length;
     for(let i=0;i<len; i++){
