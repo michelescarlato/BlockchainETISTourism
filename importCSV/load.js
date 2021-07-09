@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 console.log("Before fetch")
 fetch("js/fullData.json")
     .then(response => response.json())
+    console.log("after response.json")
     .then(json => dataIteration(json)); //console.log(json));
 
 
