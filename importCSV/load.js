@@ -11,7 +11,7 @@ fs.readFile('js/fullData.json', (err,data) => {
 
 
 
-async function dataIteration (jsonData){
+function dataIteration (jsonData){
     console.log("Inside data iteration")
 
     //console.log(jsonData.length);
