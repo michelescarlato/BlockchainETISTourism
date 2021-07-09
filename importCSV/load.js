@@ -36,24 +36,24 @@ function sendTransactionToBigChainDB (assetdata){
       //const API_PATH = 'http://192.168.100.120:9984/api/v1/'
       const API_PATH = 'http://59.0.198.238:9984/api/v1/'
       // Create a new keypair for Alice and Bob
-      const alice = new BigchainDB.Ed25519Keypair()
+      const alice = new driver.Ed25519Keypair()
       let createTxId
       const metadata = {"Survey Type": ""+SurveyType+""}
       // Construct a transaction payload
-      const txCreateAliceSimple = BigchainDB.Transaction.makeCreateTransaction(
+      const txCreateAliceSimple = driver.Transaction.makeCreateTransaction(
               assetdata,
               metadata,
               // A transaction needs an output
-              [ BigchainDB.Transaction.makeOutput(
-                              BigchainDB.Transaction.makeEd25519Condition(alice.publicKey))
+              [ driver.Transaction.makeOutput(
+                              driver.Transaction.makeEd25519Condition(alice.publicKey))
               ],
               alice.publicKey
       )
 
       // Sign the transaction with private keys of Alice to fulfill it
-      const txCreateAliceSimpleSigned = BigchainDB.Transaction.signTransaction(txCreateAliceSimple, alice.privateKey)
+      const txCreateAliceSimpleSigned = driver.Transaction.signTransaction(txCreateAliceSimple, alice.privateKey)
       // Send the transaction off to BigchainDB
-      let conn = new BigchainDB.Connection(API_PATH)
+      let conn = new driver.Connection(API_PATH)
       conn.postTransactionCommit(txCreateAliceSimpleSigned)
       .then(res => {
             createTxId = res.id
