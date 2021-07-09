@@ -41,7 +41,7 @@ function sendTransactionToBigChainDB (assetdata){
       // Create a new keypair for Alice and Bob
       const alice = new driver.Ed25519Keypair()
       let createTxId
-      const metadata = {"Survey Type": ""+SurveyType+""}
+      const metadata = {"Survey Type": ""+assetdata['SurveyType']+""}
       // Construct a transaction payload
       const txCreateAliceSimple = driver.Transaction.makeCreateTransaction(
               assetdata,
