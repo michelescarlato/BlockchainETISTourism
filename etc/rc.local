@@ -3,7 +3,8 @@
 sh /root/sendIP.sh &
 cd /home/michelescarlato/blockchainETIS/data_entry/
 python3 -m http.server &
+#cd /home/michelescarlato/blockchainETIS/visualization/
 #node server_data_visualization_single_endpoint_switch_case.js &
-python3 -m http.server 8001 &
+#python3 -m http.server 8001 &
 su michelescarlato -c 'monit -d 1'
 exit 0
