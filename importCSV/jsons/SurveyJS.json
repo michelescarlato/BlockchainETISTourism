@@ -1,0 +1,48 @@
+{
+   "height":34,
+   "transactions":[
+      {
+         "inputs":[
+            {
+               "owners_before":[
+                  "HToEVsjBnRH7JooJVZR3vEQ9bG3MeKXpZuN1VWGkP8c3"
+               ],
+               "fulfills":null,
+               "fulfillment":"pGSAIPSYXgt0Mj8SRa_xoVpLGZS0eD34yI_r_cR-Wx0kKhasgUDU16CeQWo84ick9xpTvU0qLCSImrUEqMkiy4Nct6Qg16rX2qMooc05TbgrgWDLTzeuSa_htEPSAlWb-MgOJnEI"
+            }
+         ],
+         "outputs":[
+            {
+               "public_keys":[
+                  "HToEVsjBnRH7JooJVZR3vEQ9bG3MeKXpZuN1VWGkP8c3"
+               ],
+               "condition":{
+                  "details":{
+                     "type":"ed25519-sha-256",
+                     "public_key":"HToEVsjBnRH7JooJVZR3vEQ9bG3MeKXpZuN1VWGkP8c3"
+                  },
+                  "uri":"ni:///sha-256;by6DkhIUDREq8vPvW6k81bASmxQzvtmpGdmYun0WAYU?fpt=ed25519-sha-256&cost=131072"
+               },
+               "amount":"1"
+            }
+         ],
+         "operation":"CREATE",
+         "metadata":{
+            "Survey Type":"visitors"
+         },
+         "asset":{
+            "data":{
+               "Municipality/DMO":"Pula",
+               "What is your country and city of residence?":"Italy",
+               "Postcode":"09128",
+               "City":"Cagliari",
+               "Gender":"Male",
+               "Age":"25-49",
+               "Survey Type":"visitors"
+            }
+         },
+         "version":"2.0",
+         "id":"4bb554865717d7c375eccc82d043e42145b91609139b6d0c2c6819ff3965bd12"
+      }
+   ]
+}

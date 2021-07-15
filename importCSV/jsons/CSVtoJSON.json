@@ -1,0 +1,93 @@
+{
+   "height":36,
+   "transactions":[
+      {
+         "inputs":[
+            {
+               "owners_before":[
+                  "DUdVEv9X39fZ3KszuVEfaJog9Nafi5FcuVSFQkr63x8L"
+               ],
+               "fulfills":null,
+               "fulfillment":"pGSAILlgLkqUExk2wMJ56Zrc_sMoCr7iIJSg7MxgE12HXWPlgUB_dQOCj3inPBFjcjOlQcFIfO7d3_XyCuJg3oQqjGK1lX7LnpavMBmQO5d90p8hc-kyva1kMWdeLj7zsl3Rg24G"
+            }
+         ],
+         "outputs":[
+            {
+               "public_keys":[
+                  "DUdVEv9X39fZ3KszuVEfaJog9Nafi5FcuVSFQkr63x8L"
+               ],
+               "condition":{
+                  "details":{
+                     "type":"ed25519-sha-256",
+                     "public_key":"DUdVEv9X39fZ3KszuVEfaJog9Nafi5FcuVSFQkr63x8L"
+                  },
+                  "uri":"ni:///sha-256;hc00KzZ_JhixeBcqivOikFoMvf9Gf5vQ--ptXX5p91s?fpt=ed25519-sha-256&cost=131072"
+               },
+               "amount":"1"
+            }
+         ],
+         "operation":"CREATE",
+         "metadata":{
+            "Survey Type":"undefined"
+         },
+         "asset":{
+            "data":{
+               "Municipality/DMO":"Cagliari",
+               "What is your country and city of residence?":"italia",
+               "Postcode":"20100",
+               "City":"milano ",
+               "Gender":"Female",
+               "Age":"25 - 49",
+               "overnight":true,
+               "how many nights":"2",
+               "If No, how many hours":"",
+               "did you from":"",
+               "Purpose":[
+                  "Work or business purposes",
+                  "Health"
+               ],
+               "how many":[
+                  "Alone"
+               ],
+               "primary transport":[
+                  "Airplane"
+               ],
+               "method transport here":[
+                  "Car"
+               ],
+               "first time here":false,
+               "If No, how many times":"8",
+               "When last visit":"Negli ultimi 12 mesi",
+               "Interesting Features":[
+                  
+               ],
+               "kind of accommodation":[
+                  "Hotel / Resort / Motel"
+               ],
+               "spend per day":"50 - 100 EURO",
+               "expenses":"Within what was planned",
+               "disability or reduced mobility":false,
+               "special needs":"Neutral",
+               "sustainability efforts":false,
+               "initiatives aware":"",
+               "Overall Satisfaction":"Neither Agree Nor Disagree",
+               "Disability considerations":"Neither Agree Nor Disagree",
+               "Highest Degree":"Master\u2019s degree",
+               "Professional Status":"Full time employed for wages",
+               "Annual Household":"Medium (from 30.000 to 60.000 euros)",
+               "did you from-Comment":"",
+               "Purpose-Comment":"",
+               "primary transport-Comment":"",
+               "method transport here-Comment":"",
+               "Interesting Features-Comment":"lavoro",
+               "kind of accommodation-Comment":"",
+               "Highest Degree-Comment":"",
+               "Professional Status-Comment":"",
+               "SurveyType":"visitors"
+            }
+         },
+         "version":"2.0",
+         "id":"a8016b9a4c08de1d741129d623081473fc42a212b8df70525273b53e434fd73e"
+      }
+   ]
+}
