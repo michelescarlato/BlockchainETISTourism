@@ -1,8 +1,8 @@
 const driver = require('bigchaindb-driver')
-//const fetch = require('node-fetch');
 const fs = require('fs');
 
-console.log("Before fetch")
+const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
 
 fs.readFile('js/fullData.json', (err,data) => {
         if (err) throw err;
@@ -10,27 +10,27 @@ fs.readFile('js/fullData.json', (err,data) => {
 });
 
 
-
-function dataIteration (jsonData){
+async function dataIteration (jsonData){
     console.log("Inside data iteration")
 
     //console.log(jsonData.length);
     let len = jsonData.length;
     for(let i=0;i<3; i++){
-        //TODO: manage async calls
-        // Add code here
-
-        // demo:
+        console.log('Taking a break...');
+        await sleepNow(5000);
+        //await new Promise(done => setTimeout(() => done(), 5000));
+        console.log('5 seconds later...');
         // Accessing elements
         console.log(jsonData[i]);
         assetdata=jsonData[i]
+
+        console.log(jsonData[i])
         sendTransactionToBigChainDB (assetdata)
+
         // Accessing a single field of the i-th element
         //console.log(jsonData[i]['Postcode']);
         // await sendTransactionToBigChainDB(jsonData[i]);
-
     }
-
 }
 
 
