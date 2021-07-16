@@ -139,6 +139,9 @@ npm install bip39@2.5.0
 npm install mongodb@3.0.4
 npm install express -–save
 npm install jquery
+npm install async
+npm install await
+npm install promise
 ```
 
 This is the [package.json](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/package.json) file.
