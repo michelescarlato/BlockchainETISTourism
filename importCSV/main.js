@@ -15,7 +15,7 @@ async function dataIteration (jsonData){
 
     //console.log(jsonData.length);
     let len = jsonData.length;
-    for(let i=5;i<20; i++){
+    for(let i=20;i<40; i++){
         console.log('Taking a break...');
         await sleepNow(5000);
         //await new Promise(done => setTimeout(() => done(), 5000));
